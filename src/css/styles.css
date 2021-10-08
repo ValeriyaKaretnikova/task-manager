@@ -253,23 +253,20 @@ svg {
 }
 
 .button-container {
-  width: 100px;
-  height: 100px;
+  width: 150px;
   margin: 3rem auto 0rem;
 }
 
 #gooey-button {
   font-size: 2rem;
-  padding: 1rem;
-  width: 80%;
-  height: 80%;
+  line-height: 2;
+  width: 100%;
   border: none;
   color: #fff;
   -webkit-filter: url("#gooey");
           filter: url("#gooey");
   position: relative;
   background-color: #7f94cb;
-  border-radius: 50%;
   -webkit-box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.3);
 }

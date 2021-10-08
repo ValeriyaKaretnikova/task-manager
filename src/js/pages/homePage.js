@@ -16,7 +16,7 @@ const homePage = function(params) {
     buttonContainer.className ="button-container";
 
     buttonContainer.appendChild(makeElement(svg()))
-    buttonContainer.appendChild(makeElement(button('gooey-button', 'btnAction')));
+    buttonContainer.appendChild(button('gooey-button', 'btnAction'));
 
     
     pageHeader.appendChild(buttonContainer);

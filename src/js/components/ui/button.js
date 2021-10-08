@@ -1,3 +1,5 @@
+import makeElement from "../../utils/makeElement";
+
 const svg = () => {
 
     const element = `
@@ -17,23 +19,28 @@ const svg = () => {
 }
 
 const button = (id= '', className='') => {
-    return `
+    const template =  `
     <button id= ${id} class=${className} type='Submit'>
     &gt;
-    <span class="bubbles">
-        <span class="bubble"></span>
-        <span class="bubble"></span>
-        <span class="bubble"></span>
-        <span class="bubble"></span>
-        <span class="bubble"></span>
-        <span class="bubble"></span>
-        <span class="bubble"></span>
-        <span class="bubble"></span>
-        <span class="bubble"></span>
-        <span class="bubble"></span>
-    </span>
-</button>
+        <span class="bubbles">
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+        </span>
+    </button>
     `
+    const buttonElm = makeElement(template);
+    buttonElm.addEventListener('click', function(e){
+        console.log(e);
+    })
+    return buttonElm;
 }
 
 export { svg, button }

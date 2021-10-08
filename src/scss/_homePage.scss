@@ -85,26 +85,32 @@ svg {
   position: absolute;
 }
 .button-container {
-  width: 100px;
-  height: 100px;
+  width: 120px;
   margin: 3rem auto 0rem;
 }
 
 #gooey-button {
   font-size: 2rem;
-  padding: 1rem;
-  width: 80%;
-  height: 80%;
+  line-height: 2;
+  width: 100%;
   border: none;
   color: $white;
   filter: url("#gooey");
   position: relative;
   background-color: $purple;
-  border-radius: 50%;
-  box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.3);
-  &:focus {
+  border-radius: 20px;
+  transition: all 0.5s ease-in-out;
+  &:focus,
+  &:hover {
     outline: none;
+    background-color: $blue;
+    transform: scale(1.05);
+    .bubbles .bubble{
+      background-color: $blue;
+      transform: scale(1.05);
+    }
   }
+  
   .bubbles {
     
     position: absolute;
@@ -120,6 +126,7 @@ svg {
       left: 0;
       display: block;
       z-index: -1;
+      transition: all 0.5s ease-in-out;
       &:nth-child(1) {
         left: 56px;
         width: 25px;
