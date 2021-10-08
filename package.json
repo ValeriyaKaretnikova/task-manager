@@ -1,0 +1,29 @@
+{
+  "name": "taskmanager",
+  "version": "1.0.0",
+  "description": "assignment 1 for DMIT2008 class",
+  "default": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx parcel src/index.html",
+    "build": "npx parcel build src/index.html",
+    "clean:dev": "rm -rf .parcel-cache dist",
+    "clean:git": "rm -rf .parcel-cache dist  node_modules"
+  },
+  "keywords": [
+    "task",
+    "taskManager",
+    "todo",
+    "todoList"
+  ],
+  "author": "Valeriya Karetnikova",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "http-server": "^13.0.2",
+    "parcel": "^2.0.0-rc.0",
+    "sass": "^1.40.1"
+  },
+  "dependencies": {}
+}

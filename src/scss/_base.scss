@@ -1,0 +1,25 @@
+@use 'colors' as *;
+
+// Smooth scrolling
+html {
+    scroll-behavior: smooth;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container{
+
+   max-width: 500px;
+    margin: 0 auto;
+}
+
+body {  
+    background-color: $white;
+    max-width: 480px;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+}
