@@ -8,67 +8,68 @@
   width: 100%;
   display: block;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 #flip {
   height: 55px;
   overflow: hidden;
-}
-
-#flip > div > div {
-  color: #fff;
-  padding: 0px 12px;
-  line-height: 1.5;
-  margin-bottom: 3rem;
-  display: inline-block;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-#flip div:first-child {
-  animation: show 7s linear infinite;
-}
-
-#flip div div {
-  background: $green;
-}
-#flip div:first-child div {
-  background: $pink;
-}
-#flip div:last-child div {
-  background: $blue;
-}
-#flip div:nth-child(3) div {
-  background: $purple;
+   div > div {
+    color: #fff;
+    padding: 0px 12px;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  div:first-child {
+    animation: show 9s linear infinite;
+  }
+  div div {
+    background: $green;
+  }
+  div:first-child div {
+    background: $pink;
+  }
+  div:last-child div {
+    background: $blue;
+  }
+  div:nth-child(3) div {
+    background: $purple;
+  }
 }
 
 @keyframes show {
   0% {
     margin-top: -24rem;
   }
-  12% {
+  11% {
     margin-top: -18rem;
   }
-  25% {
+  22% {
     margin-top: -18rem;
   }
-  37% {
+  33% {
     margin-top: -12rem;
   }
-  50% {
+  45% {
     margin-top: -12rem;
   }
-  62% {
+  57% {
     margin-top: -6rem;
   }
-  74% {
+  70% {
     margin-top: -6rem;
   }
-  87% {
+  82% {
+    margin-top: 0rem;
+  }
+  93% {
     margin-top: 0rem;
   }
   100% {
-    margin-top: 0rem;
+    margin-top: 2rem;
   }
 }
 
@@ -81,12 +82,13 @@
   margin: 1rem auto;
 }
 
-svg {
-  position: absolute;
-}
-.button-container {
+
+.link-container {
   width: 120px;
   margin: 3rem auto 0rem;
+  svg {
+    position: absolute;
+  }
 }
 
 #gooey-button {
@@ -100,6 +102,8 @@ svg {
   background-color: $purple;
   border-radius: 20px;
   transition: all 0.5s ease-in-out;
+  text-decoration: none;
+  display: block;
   &:focus,
   &:hover {
     outline: none;
@@ -111,8 +115,7 @@ svg {
     }
   }
   
-  .bubbles {
-    
+  .bubbles {   
     position: absolute;
     top: 0;
     left: 0;

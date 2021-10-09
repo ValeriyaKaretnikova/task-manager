@@ -1,8 +1,10 @@
-const tagline = () => {
+import makeElement from "../../utils/makeElement";
 
-    return `
-    <p class="tag">Manage Your Daily Todos Easily</p>
+const tagline = (content = '') => {
+    const template = `
+    <p class="tag">${content}</p>
     `
+    return makeElement(template);
 }
 
 export default tagline;

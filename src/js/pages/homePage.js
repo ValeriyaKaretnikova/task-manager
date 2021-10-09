@@ -1,29 +1,24 @@
 import logo from "../components/icons/logo";
-import makeElement from "../utils/makeElement"
 import header from "../components/ui/header";
 import tagline from "../components/ui/tagline";
-import { svg } from "../components/ui/button";
-import { button } from "../components/ui/button";
+import { svg } from "../components/ui/link";
+import { link } from "../components/ui/link";
 
 const homePage = function(params) {
     const pageHeader = document.createElement('header');
     pageHeader.classList.add('page-header');
-    pageHeader.appendChild(makeElement(header()))
+    pageHeader.appendChild(header());
     pageHeader.appendChild(logo());
-    pageHeader.appendChild(makeElement(tagline()));
+    pageHeader.appendChild(tagline('Best Manager for your daily todos'));
 
-    const buttonContainer = document.createElement('div');
-    buttonContainer.className ="button-container";
+    const linkContainer = document.createElement('div');
+    linkContainer.className ="link-container";
+    linkContainer.appendChild(svg());
+    linkContainer.appendChild(link('gooey-button', 'linkAction', '#', 'bubble'));
 
-    buttonContainer.appendChild(makeElement(svg()))
-    buttonContainer.appendChild(button('gooey-button', 'btnAction'));
-
-    
-    pageHeader.appendChild(buttonContainer);
-    
+    pageHeader.appendChild(linkContainer);
     
     return pageHeader;
-
 }
 
 export default homePage;
