@@ -24,7 +24,8 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   div:first-child {
-    animation: show 9s ease infinite;
+    transform: translateY(48px);
+    animation: show 7s linear infinite;
   }
   div div {
     background: $green;
@@ -42,34 +43,47 @@
 
 @keyframes show {
   0% {
-    margin-top: -24rem;
+    // margin-top: -24rem;
+    transform: translateY(48px);
   }
-  11% {
-    margin-top: -18rem;
+  10% {
+    // margin-top: -18rem;
+    transform: translateY(0px);
   }
-  22% {
-    margin-top: -18rem;
+  20% {
+    // margin-top: -18rem;
+    transform: translateY(0px);
   }
-  33% {
-    margin-top: -12rem;
+  30% {
+    // margin-top: -12rem;
+    transform: translateY(-96px);
   }
-  45% {
-    margin-top: -12rem;
+  40% {
+    // margin-top: -12rem;
+    transform: translateY(-96px);
   }
-  57% {
-    margin-top: -6rem;
+  50% {
+    // margin-top: -6rem;
+    transform: translateY(-192px);
+  }
+  60% {
+    // margin-top: -6rem;
+    transform: translateY(-192px);
   }
   70% {
-    margin-top: -6rem;
+    // margin-top: 0rem;
+    transform: translateY(-288px);
   }
-  82% {
-    margin-top: 0rem;
+  80% {
+    // margin-top: 0rem;
+    transform: translateY(-288px);
   }
-  93% {
-    margin-top: 0rem;
+  90% {
+    transform: translateY(-384px);
   }
+
   100% {
-    margin-top: 2rem;
+    transform: translateY(-384px);
   }
 }
 
@@ -133,6 +147,8 @@
   }
   &::after {
     content: "";
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: 6px solid $pplneon;
     position: absolute;
@@ -146,8 +162,8 @@
 
 @keyframes ring {
   0% {
-    width: 82px;
-    height: 82px;
+    width: 60px;
+    height: 60px;
     opacity: 1;
   }
   100% {
