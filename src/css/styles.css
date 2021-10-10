@@ -328,6 +328,8 @@ body {
 }
 .linkAction::after {
   content: "";
+  width: 85px;
+  height: 85px;
   border-radius: 50%;
   border: 6px solid #9ab3f1;
   position: absolute;
@@ -336,8 +338,9 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-animation: ring 1.5s infinite;
-          animation: ring 1.5s infinite;
+  -webkit-animation: ring 1.5s ease-out infinite;
+          animation: ring 1.5s ease-out infinite;
+  opacity: 0;
 }
 
 @-webkit-keyframes ring {
@@ -347,9 +350,10 @@ body {
     opacity: 1;
   }
   100% {
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     opacity: 0;
+    border-radius: none;
   }
 }
 
@@ -360,9 +364,10 @@ body {
     opacity: 1;
   }
   100% {
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     opacity: 0;
+    border-radius: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */
