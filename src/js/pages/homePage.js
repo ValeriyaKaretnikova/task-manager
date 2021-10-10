@@ -11,12 +11,12 @@ const homePage = function(params) {
     pageHeader.appendChild(logo());
     pageHeader.appendChild(tagline('Best Manager for your daily todos'));
 
-    // const linkContainer = document.createElement('div');
-    // linkContainer.className ="link-container";
+    const linkContainer = document.createElement('div');
+    linkContainer.className ="link-container";
     // linkContainer.appendChild(svg());
-    pageHeader.appendChild(link('btnAction', 'linkAction', '#'));
+    linkContainer.appendChild(link('btnAction', 'linkAction', '#'));
 
-    // pageHeader.appendChild(linkContainer);
+    pageHeader.appendChild(linkContainer);
     
     return pageHeader;
 }

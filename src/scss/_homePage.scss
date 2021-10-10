@@ -14,7 +14,7 @@
 #flip {
   height: 55px;
   overflow: hidden;
-   div > div {
+  div > div {
     color: #fff;
     padding: 0px 12px;
     line-height: 1.5;
@@ -24,7 +24,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   div:first-child {
-    animation: show 9s linear infinite;
+    animation: show 9s ease infinite;
   }
   div div {
     background: $green;
@@ -82,37 +82,77 @@
   margin: 1rem auto;
 }
 
-
 .link-container {
-  width: 120px;
-  margin: 3rem auto 0rem;
-  svg {
-    position: absolute;
-  }
+  width: 80px;
+  margin: 1.5rem auto 0rem;
+  height: 80px;
+  text-align: center;
 }
 
 .linkAction {
+  width: 100%;
+  height: 100%;
+  line-height: 2.4;
   font-size: 2rem;
-  line-height: 2;
-  width: 120px;
-  margin: 2rem auto 0rem;
-  border: none;
+  font-weight: bold;
   color: $white;
+  background: $purple;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 12px 12px 24px $purple;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
   position: relative;
-  background-color: $purple;
-  border-radius: 20px;
-  transition: all 0.5s ease-in-out;
   text-decoration: none;
   display: block;
-  &:focus,
-  &:hover {
-    outline: none;
-    background-color: $blue;
-    transform: scale(1.05);
-    .bubbles .bubble{
-      background-color: $blue;
-      transform: scale(1.05);
+  &::before {
+    content: "";
+    border-radius: 50%;
+    min-width: calc(82px + 12px);
+    min-height: calc(82px + 12px);
+    border: 5px solid $pplneon;
+    box-shadow: 0 0 80px $pplneon;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0s;
+  }
+  &:hover,
+  &:focus {
+    transform: translateY(-6px);
+    &::before {
+      opacity: 1;
     }
+    &::after {
+      animation: none;
+      display: none;
+    }
+  }
+  &::after {
+    content: "";
+    border-radius: 50%;
+    border: 6px solid $pplneon;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
   }
 }
 
+@keyframes ring {
+  0% {
+    width: 82px;
+    height: 82px;
+    opacity: 1;
+  }
+  100% {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+  }
+}
