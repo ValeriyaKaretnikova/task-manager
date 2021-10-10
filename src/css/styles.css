@@ -287,8 +287,6 @@ body {
   background: #7f94cb;
   border: none;
   border-radius: 50%;
-  -webkit-box-shadow: 12px 12px 24px #7f94cb;
-          box-shadow: 12px 12px 24px #7f94cb;
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;

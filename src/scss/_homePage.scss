@@ -100,7 +100,6 @@
   background: $purple;
   border: none;
   border-radius: 50%;
-  box-shadow: 12px 12px 24px $purple;
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   outline: none;
@@ -158,6 +157,6 @@
     width: 125px;
     height: 125px;
     opacity: 0;
-    border-radius: none;
+    display: none;
   }
 }
