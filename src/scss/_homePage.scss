@@ -24,7 +24,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   div:first-child {
-    transform: translateY(48px);
+    // transform: translateY(48px);
     animation: show 7s linear infinite;
   }
   div div {
@@ -43,47 +43,34 @@
 
 @keyframes show {
   0% {
-    // margin-top: -24rem;
     transform: translateY(48px);
   }
-  10% {
-    // margin-top: -18rem;
+  12% {
     transform: translateY(0px);
   }
-  20% {
-    // margin-top: -18rem;
+  24% {
     transform: translateY(0px);
   }
-  30% {
-    // margin-top: -12rem;
+  36% {
     transform: translateY(-96px);
   }
-  40% {
-    // margin-top: -12rem;
+  48% {
     transform: translateY(-96px);
-  }
-  50% {
-    // margin-top: -6rem;
-    transform: translateY(-192px);
   }
   60% {
-    // margin-top: -6rem;
     transform: translateY(-192px);
   }
-  70% {
-    // margin-top: 0rem;
+  72% {
+    transform: translateY(-192px);
+  }
+  83% {
     transform: translateY(-288px);
   }
-  80% {
-    // margin-top: 0rem;
+  95% {
     transform: translateY(-288px);
   }
-  90% {
-    transform: translateY(-384px);
-  }
-
   100% {
-    transform: translateY(-384px);
+    transform: translateY(-340px);
   }
 }
 
@@ -147,8 +134,8 @@
   }
   &::after {
     content: "";
-    width: 60px;
-    height: 60px;
+    // width: 60px;
+    // height: 60px;
     border-radius: 50%;
     border: 6px solid $pplneon;
     position: absolute;
@@ -156,14 +143,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: ring 1.5s infinite;
+    animation: ring 1.5s ease-out infinite;
   }
 }
 
 @keyframes ring {
   0% {
-    width: 60px;
-    height: 60px;
+    width: 85px;
+    height: 85px;
     opacity: 1;
   }
   100% {

@@ -160,10 +160,8 @@ body {
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #flip div:first-child {
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
-  -webkit-animation: show 9s ease infinite;
-          animation: show 9s ease infinite;
+  -webkit-animation: show 7s linear infinite;
+          animation: show 7s linear infinite;
 }
 #flip div div {
   background: #42c58a;
@@ -180,95 +178,87 @@ body {
 
 @-webkit-keyframes show {
   0% {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
+    -webkit-transform: translateY(48px);
+            transform: translateY(48px);
   }
-  10% {
+  12% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
-  20% {
+  24% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
-  30% {
+  36% {
     -webkit-transform: translateY(-96px);
             transform: translateY(-96px);
   }
-  40% {
+  48% {
     -webkit-transform: translateY(-96px);
             transform: translateY(-96px);
-  }
-  50% {
-    -webkit-transform: translateY(-192px);
-            transform: translateY(-192px);
   }
   60% {
     -webkit-transform: translateY(-192px);
             transform: translateY(-192px);
   }
-  70% {
+  72% {
+    -webkit-transform: translateY(-192px);
+            transform: translateY(-192px);
+  }
+  83% {
     -webkit-transform: translateY(-288px);
             transform: translateY(-288px);
   }
-  80% {
+  95% {
     -webkit-transform: translateY(-288px);
             transform: translateY(-288px);
-  }
-  90% {
-    -webkit-transform: translateY(-384px);
-            transform: translateY(-384px);
   }
   100% {
-    -webkit-transform: translateY(-384px);
-            transform: translateY(-384px);
+    -webkit-transform: translateY(-340px);
+            transform: translateY(-340px);
   }
 }
 
 @keyframes show {
   0% {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
+    -webkit-transform: translateY(48px);
+            transform: translateY(48px);
   }
-  10% {
+  12% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
-  20% {
+  24% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
-  30% {
+  36% {
     -webkit-transform: translateY(-96px);
             transform: translateY(-96px);
   }
-  40% {
+  48% {
     -webkit-transform: translateY(-96px);
             transform: translateY(-96px);
-  }
-  50% {
-    -webkit-transform: translateY(-192px);
-            transform: translateY(-192px);
   }
   60% {
     -webkit-transform: translateY(-192px);
             transform: translateY(-192px);
   }
-  70% {
+  72% {
+    -webkit-transform: translateY(-192px);
+            transform: translateY(-192px);
+  }
+  83% {
     -webkit-transform: translateY(-288px);
             transform: translateY(-288px);
   }
-  80% {
+  95% {
     -webkit-transform: translateY(-288px);
             transform: translateY(-288px);
-  }
-  90% {
-    -webkit-transform: translateY(-384px);
-            transform: translateY(-384px);
   }
   100% {
-    -webkit-transform: translateY(-384px);
-            transform: translateY(-384px);
+    -webkit-transform: translateY(-340px);
+            transform: translateY(-340px);
   }
 }
 .tag {
@@ -338,8 +328,6 @@ body {
 }
 .linkAction::after {
   content: "";
-  width: 60px;
-  height: 60px;
   border-radius: 50%;
   border: 6px solid #9ab3f1;
   position: absolute;
@@ -354,8 +342,8 @@ body {
 
 @-webkit-keyframes ring {
   0% {
-    width: 60px;
-    height: 60px;
+    width: 85px;
+    height: 85px;
     opacity: 1;
   }
   100% {
@@ -367,8 +355,8 @@ body {
 
 @keyframes ring {
   0% {
-    width: 60px;
-    height: 60px;
+    width: 85px;
+    height: 85px;
     opacity: 1;
   }
   100% {
