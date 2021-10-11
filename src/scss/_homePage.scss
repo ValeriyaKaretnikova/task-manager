@@ -92,6 +92,8 @@
 
 .linkAction {
   background: $purple;
+ 
+background: linear-gradient(90deg, rgba(174,194,249,1) 0%, rgba(127,148,203,1) 100%);
   border-radius: 50%;
   box-shadow: 0 0 0 0 $purple;
   text-decoration: none;
@@ -110,6 +112,7 @@
   &:focus {
     top: -6px;
     background: $blue;
+    background: linear-gradient(90deg, rgba(157,227,252,1) 0%, rgba(78,199,243,1) 100%);
     animation:none;
   }
 }

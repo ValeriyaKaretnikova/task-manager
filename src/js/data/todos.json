@@ -1,0 +1,45 @@
+{ 
+    "todos" :[
+{
+    "id" : "abcd1234",
+    "category" : "work", 
+    "title" : "Design Meeting", 
+    "isComplete" : "false", 
+    "startDate" : "2021, 10, 14", 
+    "startTime" : "9:30",
+    "endDate" : "2021, 10, 14",
+    "endTime" : "11:30" 
+},
+{
+    "id" : "efgh5678",
+    "category" : "school", 
+    "title" : "AppDev - In-Class Assesment", 
+    "isComplete" : "true", 
+    "startDate" : "2021, 10, 8", 
+    "startTime" : "8:00", 
+    "endDate" : "2021, 10, 8",
+    "endTime" : "10:30" 
+},
+{
+    "id" : "ijkl9012",
+    "category" : "friends", 
+    "title" : "Haloween Party", 
+    "isComplete" : "false", 
+    "startDate" : "2021, 10, 31", 
+    "startTime" : "21:00", 
+    "endDate" : "2021, 10, 31",
+    "endTime" : "23:50" 
+},
+{
+    "id" : "mnop3456",
+    "category" : "family", 
+    "title" : "School Volunteering", 
+    "isComplete" : "false", 
+    "startDate" : "2021, 10, 26", 
+    "startTime" : "8:20", 
+    "endDate" : "2021, 10, 26",
+    "endTime" : "11:20" 
+}
+
+]
+}

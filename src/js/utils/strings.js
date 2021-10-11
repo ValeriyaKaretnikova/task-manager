@@ -1,0 +1,1 @@
+export const tag = "Best Manager for your daily todos";
