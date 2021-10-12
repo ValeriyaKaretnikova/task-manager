@@ -8,7 +8,7 @@ const homePage = function(params) {
     const pageHeader = document.createElement('header');
     pageHeader.classList.add('page-header');
     pageHeader.appendChild(header());
-    pageHeader.appendChild(logo());
+    pageHeader.appendChild(logo("logo.jpg", "Task Manager Logo"));
     pageHeader.appendChild(tagline(tag));
 
     const linkContainer = document.createElement('div');
