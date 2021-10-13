@@ -23,7 +23,11 @@ const todoPage = function () {
     userData.todos.forEach(element => {
       const completed = element.isComplete === "true"? true : false;
       const item = todo(element.id, element.title, element.category, element.startTime, element.endTime, element.startDate, element.endDate, completed);
-        todosWrapper.appendChild(item);
+// item.querySelector('.menu fas').addEventListener('click', () => {
+//   document.querySelector('icons').classList.toggle('show');
+
+// })
+      todosWrapper.appendChild(item);
     });
 
     const page = document.createElement('div');
