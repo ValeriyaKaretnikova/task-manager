@@ -2,6 +2,7 @@ import tagline from "../components/ui/tagline";
 import logo from "../components/icons/logo";
 import { tag } from "../utils/strings";
 import todo from "../components/ui/todo";
+import addToDo from "../components/ui/addtodo";
 
 const todoPage = function () {
 
@@ -30,7 +31,8 @@ const todoPage = function () {
     //Append header and main
     const page = document.createElement('div');
     page.appendChild(header);
-    page.appendChild(main)
+    page.appendChild(main);
+    document.querySelector('body').appendChild(addToDo());
 
      
     return page;
