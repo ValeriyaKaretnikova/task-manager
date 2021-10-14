@@ -3,8 +3,9 @@ import logo from "../components/icons/logo";
 import { tag } from "../utils/strings";
 import todo from "../components/ui/todo";
 import addToDo from "../components/ui/addtodo";
+import { dataFetcher } from "../utils/dataFetcher";
 
-const todoPage = function () {
+const todoPage = async function () {
 
     // Header
     const header = document.createElement('header');
@@ -15,7 +16,10 @@ const todoPage = function () {
     header.appendChild(h1);
 
     // Main
-    const userData = require('~/src/js/data/todos.json');
+    // const userData = require('~/src/js/data/todos.json');
+    const userData = await dataFetcher('https://github.com/ValeriyaKaretnikova/taskManager/blob/main/data.json')
+    console.log(userData);
+    
     const main = document.createElement('main');
     const todosWrapper = document.createElement('div');
     todosWrapper.className = "todos-wrapper";
