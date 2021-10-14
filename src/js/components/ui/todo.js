@@ -35,29 +35,27 @@ const todo = (id = '', title = '', category = '', startTime = '', endTime = '', 
     </div>
     <div class="menu">
         <i class="fas fa-ellipsis-v"></i> 
-    </div>
-    <div class="icons">
-        <div class="tooltip">
-            <i class="fas fa-check-square"></i>
-            <span class="tooltiptext">Check as Complete</span>
+        <div class="icons">
+            <div class="tooltip">
+                <i class="fas fa-check-square"></i>
+                <span class="tooltiptext">Check as Complete</span>
+            </div>
+            <div class="tooltip">
+                <i class="fas fa-edit"></i>
+                <span class="tooltiptext">Edit Task</span>
+            </div>
+            <div class="tooltip">
+                <i class="fas fa-trash-alt"></i>
+                <span class="tooltiptext">Delete Task</span>
+            </div>
         </div>
-        <div class="tooltip">
-            <i class="fas fa-edit"></i>
-            <span class="tooltiptext">Edit Task</span>
-        </div>
-        <div class="tooltip">
-            <i class="fas fa-trash-alt"></i>
-            <span class="tooltiptext">Delete Task</span>
-        </div>
-        
-        
     </div>
 </div>
     `
     const element = makeElement(template);
 
-    element.querySelector('.menu').addEventListener('click', function (e) {     
-        e.currentTarget.nextElementSibling.classList.toggle('show');
+    element.querySelector('.menu').addEventListener('click', function (e) {  
+        e.currentTarget.querySelector('.icons').classList.toggle('show');
     })
 
     return element;

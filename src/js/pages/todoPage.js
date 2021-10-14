@@ -20,21 +20,20 @@ const todoPage = function () {
     todosWrapper.className = "todos-wrapper";
     main.appendChild(todosWrapper);
 
+    //Create todos and append them to the container
     userData.todos.forEach(element => {
       const completed = element.isComplete === "true"? true : false;
       const item = todo(element.id, element.title, element.category, element.startTime, element.endTime, element.startDate, element.endDate, completed);
-// item.querySelector('.menu fas').addEventListener('click', () => {
-//   document.querySelector('icons').classList.toggle('show');
-
-// })
       todosWrapper.appendChild(item);
     });
 
+    //Append header and main
     const page = document.createElement('div');
     page.appendChild(header);
     page.appendChild(main)
-   
-    return page;
-}
 
+     
+    return page;
+  }
+  
 export default todoPage

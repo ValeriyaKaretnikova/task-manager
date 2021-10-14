@@ -13,6 +13,8 @@
         display: flex;
         flex-direction: row;
         align-items: flex-start;
+        position: relative;
+        z-index:0;
         img {
             flex: 1 1 25%;
             width: 40%;
@@ -24,43 +26,59 @@
             margin-bottom: 2rem;
         }
         .menu {
+            position: relative;
             .fa-ellipsis-v {
-                width: 20px;
-                height: 20px;
+                width: 25px;
+                height: 25px;
+                position: relative;
+                z-index: 5;
+                transition: all 0.2s ease;
                 path {
                     fill: $grey;
                 }
+                &:hover,
+                &:focus {
+                    transform: scale(1.05);
+                    path {
+                        fill: rgb(110, 110, 110);
+                    }
+                }
             }
-        }
-        .icons {
-            opacity: 0;
-            visibility: hidden;
-            position: absolute;
-        }
-        .show {
-            display: block;
-            visibility: visible;
-            opacity: 1;
-            top: 0.4rem;
-            right: 2.4rem;
-            background-color: white;
-            padding: 0.5rem 0 0 0.5rem;
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            .fa-edit,
-            .fa-trash-alt,
-            .fa-check-square {
-                width: 20px;
-                height: 20px;
-                margin-right: 0.8rem;
+            .icons {
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                display: flex;
+                z-index:1;
+                top: -1rem;
+                right: -3rem;
+                background-color: white;
+                border-radius: 10px;
+                padding: 1rem 2.4rem 0.8rem 1rem;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                transition: all 0.5s ease;
+                .fa-edit,
+                .fa-trash-alt,
+                .fa-check-square {
+                    width: 25px;
+                    height: 25px;
+                    margin-right: 1rem;
+                .fa-edit path {
+                    fill: $purple;
+                }
+                }
+                .fa-trash-alt path {
+                    fill: $pink;
+                }
+                .fa-check-square path {
+                    fill: $green;
+                }
             }
-            .fa-edit path {
-                fill: $purple;
-            }
-            .fa-trash-alt path {
-                fill: $pink;
-            }
-            .fa-check-square path {
-                fill: $green;
+            .show {
+                visibility: visible;
+                opacity: 1;
+                right: -1rem;
+                
             }
         }
 
