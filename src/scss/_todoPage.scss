@@ -154,10 +154,12 @@
     position: fixed;
     bottom: 0;
     left: -10vw;
+    z-index: 100;
 }
 
 .addToDo {
     position: fixed;
+    z-index: 100;
     bottom:3vh;
     right: 45vw;
     width: 70px;
