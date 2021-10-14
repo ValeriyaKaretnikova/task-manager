@@ -32,7 +32,7 @@ const todoPage = function () {
     const page = document.createElement('div');
     page.appendChild(header);
     page.appendChild(main);
-    document.querySelector('body').appendChild(addToDo());
+    page.appendChild(addToDo());
 
      
     return page;
