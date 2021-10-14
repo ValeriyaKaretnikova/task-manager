@@ -1,16 +1,10 @@
 import makeElement from "../../utils/makeElement";
 
-const link = (id= '', className='', link="#") => { 
+const link = (id= '', className='', link="#", content = "&gt;") => { 
     const template =`
-    <a href="${link}" id="${id}" class="${className}">&gt;</a>`;
+    <a href="${link}" id="${id}" class="${className}">${content}</a>`;
 
     const linkElm = makeElement(template);
-
-    // Event listener
-    // linkElm.addEventListener('click', function(e){
-    //     e.preventDefault();
-    //     // console.log(e);
-    // })
 
     return linkElm;
 }

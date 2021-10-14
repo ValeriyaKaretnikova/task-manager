@@ -1,4 +1,5 @@
 import todo from "../components/ui/todo";
+
 const createToDoList = function(data){
 
     const main = document.createElement('main');
@@ -12,13 +13,10 @@ const createToDoList = function(data){
     });
     
     main.appendChild(todosWrapper);
-
-    // const todoPage = document.querySelector('.todoPage');
-    
+   
     if (document.querySelector('.todoPage')){
         document.querySelector('.todoPage').appendChild(main);
     }
-
 }
 
 export default createToDoList;
