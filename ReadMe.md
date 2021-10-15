@@ -11,7 +11,12 @@
 -  [Simple Text Animations by Nooray Yemon](https://www.sliderrevolution.com/resources/css-text-animation/)
 -  [16. Pure CSS Button with Ring Indicator](https://1stwebdesigner.com/20-amazing-pure-css-animated-buttons/)
 
+---
 
+**Link**
+
+
+[TaskManager App Link to Netlify](https://karetnikova-task-manager.netlify.app/)
 
 
 

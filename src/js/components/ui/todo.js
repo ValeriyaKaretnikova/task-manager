@@ -3,6 +3,7 @@ const familyImage = require('../../../assets/family.jpg');
 const friendsImage = require('../../../assets/friends.jpg');
 const schoolImage = require('../../../assets/school.jpg');
 const workImage = require('../../../assets/work.jpg');
+const healthImage = require('../../../assets/doctor.jpg')
 
 
 const todoImage = (category) => {
@@ -15,6 +16,9 @@ const todoImage = (category) => {
             break;
         case 'school':
             return schoolImage;
+            break;
+        case 'health': 
+            return healthImage;
             break;
         default:
             return workImage;
