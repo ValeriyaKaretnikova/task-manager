@@ -5,4 +5,4 @@ const dataFetcher = async function(url=null) {
 
     return toDoJson;
 }
-export {dataFetcher};
+export default dataFetcher;

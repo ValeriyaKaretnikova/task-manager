@@ -24,7 +24,6 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   div:first-child {
-    // transform: translateY(48px);
     animation: show 7s linear infinite;
   }
   div div {
@@ -92,7 +91,7 @@
 
 .linkAction {
   background: $purple;
-  background: linear-gradient(90deg, rgba(174,194,249,1) 0%, rgba(127,148,203,1) 100%);
+  background: linear-gradient(90deg, rgba(174, 194, 249, 1) 0%, rgba(127, 148, 203, 1) 100%);
   border-radius: 50%;
   box-shadow: 0 0 0 0 $purple;
   text-decoration: none;
@@ -111,24 +110,24 @@
   &:focus {
     top: -6px;
     background: $blue;
-    background: linear-gradient(90deg, rgba(157,227,252,1) 0%, rgba(78,199,243,1) 100%);
-    animation:none;
+    background: linear-gradient(90deg, rgba(157, 227, 252, 1) 0%, rgba(78, 199, 243, 1) 100%);
+    animation: none;
   }
 }
 
 @keyframes pulse1 {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(127, 148, 203, 0.7)
+    box-shadow: 0 0 0 0 rgba(127, 148, 203, 0.7);
   }
-  
+
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 20px rgba(127, 148, 203, 0)
+    box-shadow: 0 0 0 20px rgba(127, 148, 203, 0);
   }
-  
+
   100% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(127, 148, 203, 0)
+    box-shadow: 0 0 0 0 rgba(127, 148, 203, 0);
   }
 }

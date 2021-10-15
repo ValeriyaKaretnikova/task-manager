@@ -2,9 +2,8 @@
 
 .error {
     .errorMessage {
-        margin: 4rem auto;
+        margin: 2rem auto;
         font-size: 2rem;
-
         .errorNumber {
             color: $pink;
             font-size: 2.5rem;
@@ -24,18 +23,15 @@
 
     .backToMain {
         background: $pink;
-        background: linear-gradient(90deg, rgba(255,166,167,1) 0%, rgba(243,124,125,1) 100%);
-
+        background: linear-gradient(90deg, rgba(255, 166, 167, 1) 0%, rgba(243, 124, 125, 1) 100%);
         box-shadow: 0 0 0 0 $pink;
         display: block;
-        // width: 125px;
         width: 80px;
         height: 80px;
         border-radius: 50%;
         line-height: 2.4;
         font-size: 2rem;
         font-weight: bold;
-        // font-family: 'Karla', sans-serif;
         position: relative;
         margin: 0 auto;
         top: 0px;
@@ -46,7 +42,7 @@
         &:focus {
             top: -6px;
             background: $purple;
-            background: linear-gradient(90deg, rgba(168,185,231,1) 0%, rgba(127,148,203,1) 100%);
+            background: linear-gradient(90deg, rgba(168, 185, 231, 1) 0%, rgba(127, 148, 203, 1) 100%);
             animation: none;
         }
     }

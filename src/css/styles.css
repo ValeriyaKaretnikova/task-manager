@@ -129,7 +129,7 @@ body {
   background-color: #fff;
   max-width: 480px;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 6rem;
   margin: 0 auto;
   position: relative;
 }
@@ -300,8 +300,8 @@ a {
   color: #fff;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
-  -webkit-animation: pulse 2s infinite;
-          animation: pulse 2s infinite;
+  -webkit-animation: pulse1 2s infinite;
+          animation: pulse1 2s infinite;
 }
 .linkAction:hover, .linkAction:focus {
   top: -6px;
@@ -312,7 +312,7 @@ a {
           animation: none;
 }
 
-@-webkit-keyframes pulse {
+@-webkit-keyframes pulse1 {
   0% {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
@@ -333,7 +333,7 @@ a {
   }
 }
 
-@keyframes pulse {
+@keyframes pulse1 {
   0% {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
@@ -579,11 +579,8 @@ a {
   visibility: visible;
 }
 
-.error {
-  margin: 0 auto;
-}
 .error .errorMessage {
-  margin: 4rem auto;
+  margin: 2rem auto;
   font-size: 2rem;
 }
 .error .errorMessage .errorNumber {
@@ -602,20 +599,20 @@ a {
   margin-top: 1rem;
 }
 .error .backToMain {
-  background: #7f94cb;
-  background: -webkit-gradient(linear, left top, right top, from(#aec2f9), to(#7f94cb));
-  background: linear-gradient(90deg, #aec2f9 0%, #7f94cb 100%);
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 0 0 #7f94cb;
-          box-shadow: 0 0 0 0 #7f94cb;
-  text-decoration: none;
+  background: #f37c7d;
+  background: -webkit-gradient(linear, left top, right top, from(#ffa6a7), to(#f37c7d));
+  background: linear-gradient(90deg, #ffa6a7 0%, #f37c7d 100%);
+  -webkit-box-shadow: 0 0 0 0 #f37c7d;
+          box-shadow: 0 0 0 0 #f37c7d;
   display: block;
-  font-weight: bold;
-  height: 80px;
   width: 80px;
+  height: 80px;
+  border-radius: 50%;
   line-height: 2.4;
   font-size: 2rem;
+  font-weight: bold;
   position: relative;
+  margin: 0 auto;
   top: 0px;
   color: #fff;
   -webkit-transition: all 0.3s linear;
@@ -625,30 +622,50 @@ a {
 }
 .error .backToMain:hover, .error .backToMain:focus {
   top: -6px;
-  background: #4ec7f3;
-  background: -webkit-gradient(linear, left top, right top, from(#9de3fc), to(#4ec7f3));
-  background: linear-gradient(90deg, #9de3fc 0%, #4ec7f3 100%);
+  background: #7f94cb;
+  background: -webkit-gradient(linear, left top, right top, from(#a8b9e7), to(#7f94cb));
+  background: linear-gradient(90deg, #a8b9e7 0%, #7f94cb 100%);
   -webkit-animation: none;
           animation: none;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 rgba(243, 124, 125, 0.7);
+            box-shadow: 0 0 0 0 rgba(243, 124, 125, 0.7);
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 0 20px rgba(243, 124, 125, 0);
+            box-shadow: 0 0 0 20px rgba(243, 124, 125, 0);
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 rgba(243, 124, 125, 0);
+            box-shadow: 0 0 0 0 rgba(243, 124, 125, 0);
+  }
 }
 @keyframes pulse {
   0% {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
-    -webkit-box-shadow: 0 0 0 0 rgba(127, 148, 203, 0.7);
-            box-shadow: 0 0 0 0 rgba(127, 148, 203, 0.7);
+    -webkit-box-shadow: 0 0 0 0 rgba(243, 124, 125, 0.7);
+            box-shadow: 0 0 0 0 rgba(243, 124, 125, 0.7);
   }
   70% {
     -webkit-transform: scale(1);
             transform: scale(1);
-    -webkit-box-shadow: 0 0 0 20px rgba(127, 148, 203, 0);
-            box-shadow: 0 0 0 20px rgba(127, 148, 203, 0);
+    -webkit-box-shadow: 0 0 0 20px rgba(243, 124, 125, 0);
+            box-shadow: 0 0 0 20px rgba(243, 124, 125, 0);
   }
   100% {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
-    -webkit-box-shadow: 0 0 0 0 rgba(127, 148, 203, 0);
-            box-shadow: 0 0 0 0 rgba(127, 148, 203, 0);
+    -webkit-box-shadow: 0 0 0 0 rgba(243, 124, 125, 0);
+            box-shadow: 0 0 0 0 rgba(243, 124, 125, 0);
   }
 }
 /*# sourceMappingURL=styles.css.map */
