@@ -13,7 +13,7 @@ const homePage = function(params) {
 
     const linkContainer = document.createElement('div');
     linkContainer.className ="link-container";
-    linkContainer.appendChild(link('btnAction', 'linkAction', 'todo'));
+    linkContainer.appendChild(link('linkAction', '/todo', '&gt;'));
 
     pageHeader.appendChild(linkContainer);
     

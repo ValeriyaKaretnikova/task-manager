@@ -3,11 +3,12 @@ import todoPage from "../pages/todoPage";
 import errorPage from "../pages/pageNotFound";
 
 const routes = {
-    "/": homePage(),
-    "/todo": todoPage(),
-    "/error": errorPage()      
+    "/": homePage,
+    "/todo": todoPage    
 }
 const Router = (pathname) => {
+
+    const isValidRoute = Object.keys(routes).find(key => key === pathname);
 
     const app = document.querySelector('#app');
     app.innerHTML = '';
@@ -18,11 +19,11 @@ const Router = (pathname) => {
     )
     
     // If path doesn't exist -> load the error page
-    if (routes[window.location.pathname]){
-        app.appendChild(routes[window.location.pathname]);
+    if (isValidRoute === undefined) {
+        app.appendChild(errorPage())
     }
     else {
-        app.appendChild(routes["/error"]);
+        app.appendChild(routes[isValidRoute]())
     }
 }
 

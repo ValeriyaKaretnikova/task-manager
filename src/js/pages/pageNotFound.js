@@ -14,7 +14,7 @@ const errorPage = () =>{
 
     const message = errorMessage("404", error, errorDetails);
     container.appendChild(message);
-    container.appendChild(link("backToMain", "backToMain", "/", "<"));
+    container.appendChild(link("backToMain", "/", "&lt;"));
     return container;
 
 }
