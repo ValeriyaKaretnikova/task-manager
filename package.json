@@ -1,5 +1,5 @@
 {
-  "name": "taskmanager",
+  "name": "task-manager",
   "version": "1.0.0",
   "description": "assignment 1 for DMIT2008 class",
   "default": "src/index.html",
