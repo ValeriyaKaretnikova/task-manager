@@ -1,7 +1,7 @@
 {
   "name": "task-manager",
   "version": "1.0.0",
-  "description": "assignment 1 for DMIT2008 class",
+  "description": "web app project that allows a user to create and manipulate different tasks.",
   "default": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,9 +12,9 @@
   },
   "keywords": [
     "task",
-    "taskManager",
+    "task-manager",
     "todo",
-    "todoList"
+    "todo-list"
   ],
   "author": "Valeriya Karetnikova",
   "license": "ISC",
