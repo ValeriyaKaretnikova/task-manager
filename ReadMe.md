@@ -14,9 +14,9 @@ This application is built by using:
 **Page Screenshots**
 
 
-![Index page](./screenshots/index.JPG)
-![Todos page](./screenshots/todo.JPG)
-![Error Page](./screenshots/error.JPG)
+![Index page](screenshots/index.JPG)
+![Todos page](screenshots/todo.JPG)
+![Error Page](screenshots/error.JPG)
 
 ---
 
