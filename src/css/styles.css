@@ -386,8 +386,8 @@ a {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 25%;
           flex: 1 1 25%;
-  width: 40%;
-  height: 40%;
+  width: 25%;
+  height: auto;
   margin-right: 1rem;
 }
 .todos-wrapper .todo .text {

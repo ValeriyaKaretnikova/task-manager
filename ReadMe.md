@@ -1,6 +1,22 @@
 # **Task Manager**
 
-Web app project "Task Manager" allows a user to create and manipulate (edit, delete, complete) different tasks. 
+Web app project "**Task Manager**" allows a user to create and manipulate (edit, delete, complete) different tasks.
+
+This application is built by using:
+- Vanilla JavaScript
+- JS Modules
+- SCSS Styling
+- Parcel Bundler
+- NPM Libraries
+- Custom Design
+---
+
+**Page Screenshots**
+
+
+![Index page](./screenshots/index.JPG)
+![Todos page](./screenshots/todo.JPG)
+![Error Page](./screenshots/error.JPG)
 
 ---
 
