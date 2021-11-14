@@ -1,12 +1,19 @@
-import homePage from "./../pages/homePage";
-import todoPage from "../pages/todoPage";
-import errorPage from "../pages/pageNotFound";
+import homePage from "../pages/home";
+import todoPage from "../pages/todoList";
+import pageNotFound from "../pages/notFound";
+import editPage from "../pages/edit";
+import addPage from "../pages/add";
+import deletePage from "../pages/delete";
 
 const routes = {
     "/": homePage,
-    "/todo": todoPage    
+    "/todo": todoPage,
+    "/delete": deletePage,
+    "/add" : addPage,
+    "/edit" : editPage,
+    "/*": pageNotFound
 }
-const Router = (pathname) => {
+const Router = (pathname, params=null) => {
 
     const isValidRoute = Object.keys(routes).find(key => key === pathname);
 
@@ -19,12 +26,12 @@ const Router = (pathname) => {
     )
     
     // If path doesn't exist -> load the error page
-    if (isValidRoute === undefined) {
-        app.appendChild(errorPage())
+    if (isValidRoute === undefined || isValidRoute === '') {
+        app.appendChild(pageNotFound())
     }
     else {
-        app.appendChild(routes[isValidRoute]())
+        app.appendChild(routes[isValidRoute](params))
     }
 }
 
-export default Router;
+export { Router };

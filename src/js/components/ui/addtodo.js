@@ -9,8 +9,8 @@ const addToDo = () => {
         </div>
     </div>
     `
-
-    return makeElement(template)
+    const element =  makeElement(template);
+    return element;
 }
 
 export default addToDo;

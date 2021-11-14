@@ -1,65 +1,74 @@
 import makeElement from "../../utils/makeElement";
-const familyImage = require('../../../assets/family.jpg');
-const friendsImage = require('../../../assets/friends.jpg');
-const schoolImage = require('../../../assets/school.jpg');
-const workImage = require('../../../assets/work.jpg');
-const healthImage = require('../../../assets/doctor.jpg')
-
 
 const todoImage = (category) => {
     switch (category) {
         case 'family':
+            const familyImage = '../../../static/images/family.jpg';
             return familyImage;
             break;
         case 'friends':
+            const friendsImage ='../../../static/images/friends.jpg';
             return friendsImage;
             break;
         case 'school':
+            const schoolImage = '../../../static/images/school.jpg';
             return schoolImage;
             break;
-        case 'health': 
+        case 'health':
+            const healthImage = '../../../static/images/doctor.jpg';
             return healthImage;
             break;
         default:
+            const workImage = '../../../static/images/work.jpg';
             return workImage;
             break;
     }
 }
-const todo = (id = '', title = '', category = '', startTime = '', endTime = '', startDate = '', endDate = '', status = false) => {
-
+const todo = ({id = '', title = '', category = '', startTime = '', endTime = '', startDate = '', endDate = '', isComplete = false}) => {
+   
     const template = `
     <div class="todo" data-key="${id}">
-    <img src= "${todoImage(category)}" alt="${category} image">
-    <div class="text">
-        <h3 class="title">${title}</h3>
-        <p class="category">${category}</p>
-        <p class="time"><span><i class="far fa-clock"></i></span>${startTime} - ${endTime}</p>
-        <p class="date">Due: ${endDate}</p>
-        <p class="status ${status ? 'completed' : 'progress'}">${status ? 'Completed' : 'Not completed'}</p>
-    </div>
-    <div class="menu">
-        <i class="fas fa-ellipsis-v"></i> 
-        <div class="icons">
-            <div class="tooltip">
-                <i class="fas fa-check-square"></i>
-                <span class="tooltiptext">Check as Complete</span>
+        <img src= "${todoImage(category)}" alt="${category} image">
+        <div class="text">
+            <h3 class="title">${title}</h3>
+            <p class="category">${category}</p>
+            <p class="time"><span><i class="far fa-clock"></i></span>${startTime} - ${endTime}</p>
+            <p class="date">Due: ${endDate}</p>
+            <p class="status ${isComplete ? 'completed' : 'progress'}">${isComplete ? 'Completed' : 'Not completed'}</p>
+        </div>
+        <div class="menu">
+            <div class="ellipsis">
+                <i class="fas fa-ellipsis-v"></i> 
             </div>
-            <div class="tooltip">
-                <i class="fas fa-edit"></i>
-                <span class="tooltiptext">Edit Task</span>
-            </div>
-            <div class="tooltip">
-                <i class="fas fa-trash-alt"></i>
-                <span class="tooltiptext">Delete Task</span>
+            
+            <div class="icons">
+                <div class="tooltip">
+                    <div class="check" data-key="${id}">
+                        <i class="fas fa-check-square" ></i>
+                    </div>     
+                    <span class="tooltiptext">Check as Complete</span>
+                </div>
+                <div class="tooltip">
+                    <div class="edit" data-key="${id}">
+                        <i class="fas fa-edit" ></i>
+                    </div>                
+                    <span class="tooltiptext">Edit Task</span>
+                </div>
+                <div class="tooltip">
+                    <div class="delete" data-key="${id}">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>   
+                    
+                    <span class="tooltiptext">Delete Task</span>
+                </div>
             </div>
         </div>
     </div>
-</div>
     `
     const element = makeElement(template);
 
-    element.querySelector('.menu').addEventListener('click', function (e) {  
-        e.currentTarget.querySelector('.icons').classList.toggle('show');
+    element.querySelector('.ellipsis').addEventListener('click', function (e) {  
+        e.currentTarget.parentElement.querySelector('.icons').classList.toggle('show');
     })
 
     return element;

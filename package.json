@@ -5,8 +5,10 @@
   "default": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx parcel src/index.html",
-    "build": "npx parcel build src/index.html",
+    "start": "npm run static && npx parcel src/index.html",
+    "static": "npx gulp",
+    "dev": "npm run static && npx parcel src/index.html",
+    "build": "npm run static && npx parcel build src/index.html",
     "clean:dev": "rm -rf .parcel-cache dist",
     "clean:git": "rm -rf .parcel-cache dist  node_modules"
   },
@@ -27,12 +29,14 @@
     "@parcel/transformer-image": "^2.0.0-rc.0",
     "@parcel/transformer-sass": "^2.0.0-rc.0",
     "@parcel/transformer-webmanifest": "^2.0.0-rc.0",
+    "gulp": "^4.0.2",
     "http-server": "^13.0.2",
     "parcel": "^2.0.0-rc.0",
     "parcel-plugin-json-url-loader": "^0.1.2",
     "sass": "^1.40.1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4"
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "uuid": "^8.3.2"
   }
 }
