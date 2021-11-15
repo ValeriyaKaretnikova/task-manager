@@ -3,7 +3,6 @@ import logo from "../../components/icons/logo";
 import { tag } from "../../utils/strings";
 
 const todosContainer = function () {
-
     //TodoList Section
     const section = document.createElement('section');
     section.id= 'todosList';
@@ -22,10 +21,8 @@ const todosContainer = function () {
 
     section.appendChild(header);
     section.appendChild(div);
-
-
+    
     return section;
-
 }
 
 export default todosContainer;

@@ -10,9 +10,6 @@ const todoPage = function () {
     const page = document.createElement('div');
     page.className ='todoPage';
     const todosList = todosContainer();
-
-  
-  
     
     // Append floating action button to the page container
     page.appendChild(addToDo());
@@ -38,7 +35,8 @@ const todoPage = function () {
     return page;
   }
   
-  export default todoPage
+  export default todoPage;
+
   
   // Functions
   function onDeleteTask(e){
@@ -62,7 +60,6 @@ const todoPage = function () {
   function onCheckTask(e){
     console.log(e.currentTarget, "check")  
   }
-
  
   // Remove event listeners
   function cleanUp( ){

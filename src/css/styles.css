@@ -668,4 +668,76 @@ a {
             box-shadow: 0 0 0 0 rgba(243, 124, 125, 0);
   }
 }
+
+.todo {
+  margin: 1rem 0;
+  padding: 1rem;
+  -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+          box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  z-index: 0;
+}
+.todo img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  width: 25%;
+  height: auto;
+  margin-right: 1rem;
+}
+.todo .text {
+  -webkit-box-flex: 3;
+      -ms-flex: 3 1 75%;
+          flex: 3 1 75%;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.buttons button {
+  width: 7rem;
+  margin: 1rem;
+  padding: 0.7rem;
+  font-family: "Karla", sans-serif;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.4);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.buttons button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.buttons .cancel {
+  background-color: #4ec7f3;
+}
+.buttons .delete {
+  background-color: #f37c7d;
+}
 /*# sourceMappingURL=styles.css.map */

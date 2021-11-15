@@ -24,8 +24,8 @@ const todoImage = (category) => {
             break;
     }
 }
+
 const todo = ({id = '', title = '', category = '', startTime = '', endTime = '', startDate = '', endDate = '', isComplete = false}) => {
-   
     const template = `
     <div class="todo" data-key="${id}">
         <img src= "${todoImage(category)}" alt="${category} image">
@@ -66,12 +66,29 @@ const todo = ({id = '', title = '', category = '', startTime = '', endTime = '',
     </div>
     `
     const element = makeElement(template);
-
     element.querySelector('.ellipsis').addEventListener('click', function (e) {  
         e.currentTarget.parentElement.querySelector('.icons').classList.toggle('show');
     })
+    return element;
+}
 
+const todoWithoutMenu = (id = '', title = '', category = '', startTime = '', endTime = '', startDate = '', endDate = '', isComplete = false) => {
+   
+    const template = `
+    <div class="todo" data-key="${id}">
+        <img src= "${todoImage(category)}" alt="${category} image">
+        <div class="text">
+            <h3 class="title">${title}</h3>
+            <p class="category">${category}</p>
+            <p class="time"><span><i class="far fa-clock"></i></span>${startTime} - ${endTime}</p>
+            <p class="date">Due: ${endDate}</p>
+            <p class="status ${isComplete ? 'completed' : 'progress'}">${isComplete ? 'Completed' : 'Not completed'}</p>
+        </div>
+    </div>
+    `
+    const element = makeElement(template);
     return element;
 }
 
 export default todo;
+export {todoWithoutMenu};

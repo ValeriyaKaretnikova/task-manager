@@ -1,2 +1,37 @@
-
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.buttons button {
+  width: 7rem;
+  margin: 1rem;
+  padding: 0.7rem;
+  font-family: "Karla", sans-serif;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.4);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.buttons button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.buttons .cancel {
+  background-color: #4ec7f3;
+}
+.buttons .delete {
+  background-color: #f37c7d;
+}
 /*# sourceMappingURL=styles.module.css.map */

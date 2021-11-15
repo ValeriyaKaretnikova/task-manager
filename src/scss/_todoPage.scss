@@ -37,10 +37,13 @@
                 }
                 &:hover,
                 &:focus {
-                    transform: scale(1.05);
+                    transform: scale(1.1);
                     path {
                         fill: rgb(110, 110, 110);
                     }
+                    
+                        cursor: pointer;
+                    
                 }
             }
             .icons {
@@ -48,7 +51,6 @@
                 visibility: hidden;
                 position: absolute;
                 display: flex;
-
                 z-index: 1;
                 top: -1rem;
                 right: -1.5rem;
@@ -63,15 +65,35 @@
                     width: 25px;
                     height: 25px;
                     margin-right: 1rem;
-                    .fa-edit path {
-                        fill: $purple;
+                    transition: all 0.2s ease;
+                    &:hover {
+                        transform: scale(1.1);
+                        cursor: pointer;
                     }
+                }
+                .fa-edit path {
+                    fill: $purple;
                 }
                 .fa-trash-alt path {
                     fill: $pink;
                 }
                 .fa-check-square path {
                     fill: $green;
+                }
+                .fa-edit:hover {
+                    path{
+                        fill: $brpurple;
+                    }
+                }
+                .fa-trash-alt:hover {
+                    path{
+                        fill: $brpink;
+                    }
+                }
+                .fa-check-square:hover {
+                    path{
+                        fill: $brgreen;
+                    }
                 }
             }
             .show {
