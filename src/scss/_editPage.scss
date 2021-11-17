@@ -1,0 +1,99 @@
+@use "colors" as *;
+
+.edit-page {
+    .buttons {
+        display: flex;
+        justify-content: center;
+        button {
+            width: 7rem;
+            margin: 1rem;
+            padding: 0.7rem;
+            font-family: "Karla", sans-serif;
+            text-transform: uppercase;
+            outline: none;
+            border: none;
+            color: $white;
+            border-radius: 10px;
+            box-shadow: 0px 10px 10px -5px rgb(0 0 0 / 40%);
+            transform: scale(1);
+            transition: all 0.4s ease;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+        }
+    }
+    .cancel {
+        background-color: $blue;
+    }
+    .edit {
+        background-color: $green;
+    }
+
+    .form {
+        display: block;
+        margin: 1rem auto;
+        text-align: left;  
+        font-family: "Karla", sans-serif;
+        
+        input,
+        select {
+            width: 100%;
+            height: 2rem;
+            border-radius: 5px;
+            border: 1px solid lightgrey;
+            margin-bottom: 1rem;
+          
+            font-size: 0.9rem;
+            outline: none;
+            transition: 0.2s;
+            padding: 0.3rem;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;            
+            &:focus{
+                border: 1px solid $blue;
+                box-shadow: 0 1.5px 6px 1px $blue;
+            }
+            &:hover {
+                border: 1px solid $blue;
+                box-shadow: 0 1.5px 6px 1px $blue;
+            }
+            
+        }
+        input[type="checkbox"]{
+            width: 1rem;
+            height: 1rem;
+            margin: 0.5rem 0 1.5rem 0.7rem;
+            display: block;
+                 
+        }
+        label {
+            text-transform: uppercase;
+            font-size: 0.9rem;      
+            color: $grey;   
+        }
+        input[readonly]{
+            background-color: rgb(243, 243, 243);
+        }
+    }
+    .flex {
+        div{
+            width:48%;
+        }
+    }
+    .large {
+        div{
+            width: 100%;
+        }       
+    }
+    .uneven {
+        div:first-child {
+            width: 24%;
+        }
+        div:nth-child(2) {
+            width: 59%;
+        }
+        div:last-child {
+            width: 12%;
+        }
+    }
+}

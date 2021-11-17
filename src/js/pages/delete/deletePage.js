@@ -1,5 +1,5 @@
 import makeElement from "../../utils/makeElement";
-import deleteHeader from "../../components/ui/deletePage";
+import deleteHeader from "../../components/ui/deleteHeader";
 import { todoWithoutMenu } from "../../components/ui/todo";
 import { Router } from "./../../routes/router";
 import { getStore } from "../../redux/store";
@@ -17,17 +17,21 @@ const deletePage = function (props) {
         Router('/todo');
     }
     function onDeleteTask(e) {
-        if (props !== null) {
-            Router('/todo');
-            const removeTask = props;
-            const index = getStore().findIndex(task => task.id === removeTask.id)
-            const action = {
-                type: "delete",
-                payload: { index },
-                cb: () => Router('/todo')
+        let confirmed = confirm("Are you sure you want to delete this task?");
+
+        if (confirmed) {
+            if (props !== null) {
+                Router('/todo');
+                const removeTask = props;
+                const index = getStore().findIndex(task => task.id === removeTask.id)
+                const action = {
+                    type: "delete",
+                    payload: { index },
+                    cb: () => Router('/todo')
+                }
+                reducer(action);
+                cleanUp();
             }
-            reducer(action);
-            cleanUp();
         }
     }
     // LAYOUT

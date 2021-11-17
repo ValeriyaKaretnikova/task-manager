@@ -26,6 +26,13 @@ const todoImage = (category) => {
 }
 
 const todo = ({id = '', title = '', category = '', startTime = '', endTime = '', startDate = '', endDate = '', isComplete = false}) => {
+    
+    //Date Manipulation to display in more friendly format
+    const options = {  weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const endDateFormat = new Date(endDate);
+    endDateFormat.setDate(endDateFormat.getDate() + 1);
+    const endDateToString = endDateFormat.toLocaleDateString('en-CA', options);
+
     const template = `
     <div class="todo" data-key="${id}">
         <img src= "${todoImage(category)}" alt="${category} image">
@@ -33,7 +40,7 @@ const todo = ({id = '', title = '', category = '', startTime = '', endTime = '',
             <h3 class="title">${title}</h3>
             <p class="category">${category}</p>
             <p class="time"><span><i class="far fa-clock"></i></span>${startTime} - ${endTime}</p>
-            <p class="date">Due: ${endDate}</p>
+            <p class="date">Due: ${endDateToString}</p>
             <p class="status ${isComplete ? 'completed' : 'progress'}">${isComplete ? 'Completed' : 'Not completed'}</p>
         </div>
         <div class="menu">

@@ -1,84 +1,86 @@
-@use "colors" as * ;
+@use "colors" as *;
 
-.todo {
-    margin: 1rem 0;
-    padding: 1rem;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-    border-radius: 10px;
-    font-size: 0.8rem;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    z-index: 0;
-    img {
-        flex: 1 1 35%;
-        width: 35%;
-        height: auto;
-        margin-right: 2rem;
-    }
-    .text {
-        flex: 3 65%;
-        margin-bottom: 2rem;
-    }
-    * {
-        text-align: left;
-        margin-bottom: 0.2rem;
-    }
-    .category {
-        font-family: "Karla", sans-serif;
-        text-transform: uppercase;
-        color: $grey;
-        font-size: 1rem;
-    }
-    .time {
-        color: $blue;
-    }
-    .date {
-        color: $grey;
-    }
-
-    .status {
-        position: absolute;
-        right: 1rem;
-        bottom: 1rem;
-
-        font-family: "Karla", sans-serif;
-        text-transform: uppercase;
-    }
-    .progress {
-        color: $green;
-    }
-    .completed {
-        color: $pink;
-    }
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    button {
-        width: 7rem;
-        margin: 1rem;
-        padding: 0.7rem;
-        font-family: "Karla", sans-serif;
-        text-transform: uppercase;
-        outline: none;
-        border: none;
-        color: $white;
+.delete-page {
+    .todo {
+        margin: 1rem 0;
+        padding: 1rem;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
         border-radius: 10px;
-        box-shadow: 0px 10px 10px -5px rgb(0 0 0 / 40%);
-        transform: scale(1);
-        transition: all 0.4s ease;
-        &:hover {
-            cursor: pointer;
-            transform: scale(1.05);
+        font-size: 0.8rem;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        z-index: 0;
+        img {
+            flex: 1 1 35%;
+            width: 35%;
+            height: auto;
+            margin-right: 2rem;
+        }
+        .text {
+            flex: 3 65%;
+            margin-bottom: 2rem;
+        }
+        * {
+            text-align: left;
+            margin-bottom: 0.2rem;
+        }
+        .category {
+            font-family: "Karla", sans-serif;
+            text-transform: uppercase;
+            color: $grey;
+            font-size: 1rem;
+        }
+        .time {
+            color: $blue;
+        }
+        .date {
+            color: $grey;
+        }
+
+        .status {
+            position: absolute;
+            right: 1rem;
+            bottom: 1rem;
+
+            font-family: "Karla", sans-serif;
+            text-transform: uppercase;
+        }
+        .progress {
+            color: $green;
+        }
+        .completed {
+            color: $pink;
         }
     }
-    .cancel {
-        background-color:$blue;
-    }
-    .delete{
-        background-color: $pink;
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        button {
+            width: 7rem;
+            margin: 1rem;
+            padding: 0.7rem;
+            font-family: "Karla", sans-serif;
+            text-transform: uppercase;
+            outline: none;
+            border: none;
+            color: $white;
+            border-radius: 10px;
+            box-shadow: 0px 10px 10px -5px rgb(0 0 0 / 40%);
+            transform: scale(1);
+            transition: all 0.4s ease;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+        }
+        .cancel {
+            background-color: $blue;
+        }
+        .delete {
+            background-color: $pink;
+        }
     }
 }
