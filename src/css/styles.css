@@ -824,12 +824,159 @@ a {
 }
 .edit-page .form {
   display: block;
-  margin: 2rem auto;
+  margin: 1rem auto;
+  text-align: left;
+  font-family: "Karla", sans-serif;
 }
-.edit-page .form input {
+.edit-page .form input,
+.edit-page .form select {
   width: 100%;
   height: 2rem;
   border-radius: 5px;
-  border: 1px solid #999;
+  border: 1px solid lightgrey;
+  margin-bottom: 1rem;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding: 0.3rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.edit-page .form input:focus,
+.edit-page .form select:focus {
+  border: 1px solid #4ec7f3;
+  -webkit-box-shadow: 0 1.5px 6px 1px #4ec7f3;
+          box-shadow: 0 1.5px 6px 1px #4ec7f3;
+}
+.edit-page .form input:hover,
+.edit-page .form select:hover {
+  border: 1px solid #4ec7f3;
+  -webkit-box-shadow: 0 1.5px 6px 1px #4ec7f3;
+          box-shadow: 0 1.5px 6px 1px #4ec7f3;
+}
+.edit-page .form input[type=checkbox] {
+  width: 1rem;
+  height: 1rem;
+  margin: 0.5rem 0 1.5rem 0.7rem;
+  display: block;
+}
+.edit-page .form label {
+  text-transform: uppercase;
+  color: #999;
+}
+.edit-page .form input[readonly] {
+  background-color: #f3f3f3;
+}
+.edit-page .flex div {
+  width: 48%;
+}
+.edit-page .large div {
+  width: 100%;
+}
+.edit-page .uneven div:first-child {
+  width: 24%;
+}
+.edit-page .uneven div:nth-child(2) {
+  width: 59%;
+}
+.edit-page .uneven div:last-child {
+  width: 12%;
+}
+
+.add-page .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.add-page .buttons button {
+  width: 7rem;
+  margin: 1rem;
+  padding: 0.7rem;
+  font-family: "Karla", sans-serif;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.4);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.add-page .buttons button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.add-page .cancel {
+  background-color: #4ec7f3;
+}
+.add-page .edit {
+  background-color: #42c58a;
+}
+.add-page .form {
+  display: block;
+  margin: 1rem auto;
+  text-align: left;
+  font-family: "Karla", sans-serif;
+}
+.add-page .form input,
+.add-page .form select {
+  width: 100%;
+  height: 2rem;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  margin-bottom: 1rem;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding: 0.3rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.add-page .form input:focus,
+.add-page .form select:focus {
+  border: 1px solid #4ec7f3;
+  -webkit-box-shadow: 0 1.5px 6px 1px #4ec7f3;
+          box-shadow: 0 1.5px 6px 1px #4ec7f3;
+}
+.add-page .form input:hover,
+.add-page .form select:hover {
+  border: 1px solid #4ec7f3;
+  -webkit-box-shadow: 0 1.5px 6px 1px #4ec7f3;
+          box-shadow: 0 1.5px 6px 1px #4ec7f3;
+}
+.add-page .form input[type=checkbox] {
+  width: 1rem;
+  height: 1rem;
+  margin: 0.5rem 0 1.5rem 0.7rem;
+  display: block;
+}
+.add-page .form label {
+  text-transform: uppercase;
+  color: #999;
+}
+.add-page .form input[readonly] {
+  background-color: #f3f3f3;
+}
+.add-page .flex div {
+  width: 48%;
+}
+.add-page .large div {
+  width: 100%;
+}
+.add-page .uneven div:first-child {
+  width: 24%;
+}
+.add-page .uneven div:nth-child(2) {
+  width: 59%;
+}
+.add-page .uneven div:last-child {
+  width: 12%;
 }
 /*# sourceMappingURL=styles.css.map */

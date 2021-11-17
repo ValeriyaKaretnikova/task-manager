@@ -10,17 +10,30 @@ function reducer(action) {
             newStore = [...store.slice(0, index), ...store.slice(index + 1)];
             updateStore(newStore);
             action.cb();
-            return "remove todo";
-        case "edit":
-            
-            const task = action.payload.editTask;
-            newStore = [...store.slice(0, index), task , ...store.slice(index +1)];
+            return "delete";
+           
+        case "edit":           
+            const editTask = action.payload.editTask;
+            newStore = [...store.slice(0, index), Object.assign({}, store[index], editTask) , ...store.slice(index +1)];
             updateStore(newStore);
             action.cb();
-            return "edit todo";
+            return "update";
+            
         case "add":
-            return "add new todo";
-        default: return store;
+            const addTask = action.payload.addTask;
+            newStore = [addTask, ...store];
+            updateStore(newStore);
+            action.cb();
+            return "add";
+
+        case "toggleStatus":
+            const toggleStatusTask = store[index];
+            newStore = [...store.slice(0, index), Object.assign({}, store[index], {isComplete: !toggleStatusTask.isComplete}) , ...store.slice(index +1)];
+            updateStore(newStore);
+            action.cb();
+            return "toggle";
+        default: 
+            return store;
     }
 }
 

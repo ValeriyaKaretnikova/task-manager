@@ -1,5 +1,5 @@
 import makeElement from "../../utils/makeElement";
-import deleteHeader from "../../components/ui/deleteHeader";
+import Header from "../../components/ui/pageHeader";
 import { todoWithoutMenu } from "../../components/ui/todo";
 import { Router } from "./../../routes/router";
 import { getStore } from "../../redux/store";
@@ -39,7 +39,7 @@ const deletePage = function (props) {
     const page = document.createElement('div');
     page.className = "delete-page";
     //Page Header
-    page.appendChild(deleteHeader());
+    page.appendChild(Header("Delete Task?"));
 
     //Todo to delete
     const todo = todoWithoutMenu(props.id, props.title, props.category, props.startTime, props.endTime, props.startDate, props.endDate, props.isComplete);
