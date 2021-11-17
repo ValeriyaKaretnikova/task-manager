@@ -81,6 +81,4 @@ function cleanUp() {
     task.removeEventListener('click', ToggleStatus);
   })
 
-  document.querySelector('.addToDo').removeEventListener('click', onAddTask);
-
 }
