@@ -6,8 +6,7 @@ function datesValid(startDate, startTime, endDate, endTime){
     else if (startDate.getTime() == endDate.getTime()){
         const sthours = parseInt(startTime.slice(0, 2));
         const enHours = parseInt(endTime.slice(0,2));
-        console.log(sthours)
-        console.log(enhours)
+  
         if (sthours > enHours){
             return false;
         }
