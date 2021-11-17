@@ -831,14 +831,14 @@ a {
 .edit-page .form input,
 .edit-page .form select {
   width: 100%;
-  height: 2rem;
+  height: 2.3rem;
   border-radius: 5px;
   border: 1px solid lightgrey;
   margin-bottom: 1rem;
   outline: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  padding: 0.3rem;
+  padding: 0.5rem;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
@@ -857,7 +857,7 @@ a {
 .edit-page .form input[type=checkbox] {
   width: 1rem;
   height: 1rem;
-  margin: 0.5rem 0 1.5rem 0.7rem;
+  margin: 0.5rem 0 2rem 0.7rem;
   display: block;
 }
 .edit-page .form label {
@@ -866,6 +866,14 @@ a {
 }
 .edit-page .form input[readonly] {
   background-color: #f3f3f3;
+}
+.edit-page .form #todoID {
+  color: #999;
+}
+.edit-page .form #todoID:hover, .edit-page .form #todoID:focus {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border: 1px solid lightgrey;
 }
 .edit-page .flex div {
   width: 48%;
@@ -881,6 +889,9 @@ a {
 }
 .edit-page .uneven div:last-child {
   width: 12%;
+}
+.edit-page .error {
+  color: #f37c7d;
 }
 
 .add-page .buttons {
@@ -916,26 +927,32 @@ a {
 .add-page .cancel {
   background-color: #4ec7f3;
 }
-.add-page .edit {
-  background-color: #42c58a;
+.add-page .add {
+  background-color: #7f94cb;
 }
 .add-page .form {
   display: block;
   margin: 1rem auto;
   text-align: left;
   font-family: "Karla", sans-serif;
+  font-size: 0.7rem;
+}
+@media (min-width: 360px) {
+  .add-page .form {
+    font-size: 0.9rem;
+  }
 }
 .add-page .form input,
 .add-page .form select {
   width: 100%;
-  height: 2rem;
+  height: 2.3rem;
   border-radius: 5px;
   border: 1px solid lightgrey;
   margin-bottom: 1rem;
   outline: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  padding: 0.3rem;
+  padding: 0.5rem;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
@@ -954,15 +971,26 @@ a {
 .add-page .form input[type=checkbox] {
   width: 1rem;
   height: 1rem;
-  margin: 0.5rem 0 1.5rem 0.7rem;
+  margin: 0.5rem 0 2rem 0.7rem;
   display: block;
 }
 .add-page .form label {
   text-transform: uppercase;
   color: #999;
 }
+.add-page .form .small-span {
+  font-size: 0.7rem;
+}
 .add-page .form input[readonly] {
   background-color: #f3f3f3;
+}
+.add-page .form #todoID {
+  color: #999;
+}
+.add-page .form #todoID:hover, .add-page .form #todoIDfocus {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border: 1px solid lightgrey;
 }
 .add-page .flex div {
   width: 48%;
@@ -978,5 +1006,8 @@ a {
 }
 .add-page .uneven div:last-child {
   width: 12%;
+}
+.add-page .error {
+  color: #f37c7d;
 }
 /*# sourceMappingURL=styles.css.map */

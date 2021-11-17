@@ -4,12 +4,16 @@ import { addForm } from "../../components/ui/form";
 import { Router } from "./../../routes/router";
 import { getStore } from "../../redux/store";
 import reducer from "./../../redux/reducers";
+import datesValid from '../../utils/datesValid';
 
 const addPage = function () {
     //FUNCTIONS
     function cleanUp() {
         page.querySelector('.cancel').removeEventListener('click', onCancelTask)
         page.querySelector('.form').removeEventListener('submit', onAddTask)
+    }
+    function onChange() {
+        document.querySelector('.error').textContent = ""
     }
     function onCancelTask(e) {
         cleanUp();
@@ -18,23 +22,33 @@ const addPage = function () {
     function onAddTask(e) {
         e.preventDefault();
 
-        const addTask = {
-            id: document.querySelector('#todoID').value,
-            category: document.querySelector('#Category').value,
-            title: document.querySelector('#Description').value,
-            isComplete: document.querySelector('#Status').checked,
-            startDate: document.querySelector('#StartDate').value,
-            startTime: document.querySelector('#StartTime').value,
-            endDate: document.querySelector('#EndDate').value,
-            endTime: document.querySelector('#EndTime').value
+        const startDate = new Date(document.querySelector('#StartDate').value);
+        const endDate = new Date(document.querySelector('#EndDate').value);
+        const startTime = document.querySelector('#StartTime').value;
+        const endTime = document.querySelector('#EndTime').value;
+
+        if (!datesValid(startDate, startTime, endDate, endTime)) {
+            document.querySelector('.error').textContent = "The start date and time must be before the end date and time"
         }
-        const action = {
-            type: "add",
-            payload: { addTask },
-            cb: () => Router('/todo')
+        else {
+            const addTask = {
+                id: document.querySelector('#todoID').value,
+                category: document.querySelector('#Category').value,
+                title: document.querySelector('#Description').value,
+                isComplete: document.querySelector('#Status').checked,
+                startDate: document.querySelector('#StartDate').value,
+                startTime: document.querySelector('#StartTime').value,
+                endDate: document.querySelector('#EndDate').value,
+                endTime: document.querySelector('#EndTime').value
+            }
+            const action = {
+                type: "add",
+                payload: { addTask },
+                cb: () => Router('/todo')
+            }
+            reducer(action);
+            cleanUp();
         }
-        reducer(action);
-        cleanUp();
     }
 
     // LAYOUT
@@ -52,6 +66,11 @@ const addPage = function () {
     // ADD EVENT LISTENERS
     page.querySelector('.cancel').addEventListener('click', onCancelTask);
     page.querySelector('.form').addEventListener('submit', onAddTask);
+
+    page.querySelector('#StartDate').addEventListener('change', onChange);
+    page.querySelector('#EndDate').addEventListener('change', onChange);
+    page.querySelector('#StartTime').addEventListener('change', onChange);
+    page.querySelector('#EndTime').addEventListener('change', onChange);
 
     return page;
 

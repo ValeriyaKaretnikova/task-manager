@@ -80,5 +80,4 @@ function cleanUp() {
     task.removeEventListener('click', onEditTask);
     task.removeEventListener('click', ToggleStatus);
   })
-
 }

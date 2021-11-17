@@ -29,8 +29,16 @@ const todo = ({ id = '', title = '', category = '', startTime = '', endTime = ''
 
     //Date Manipulation to display in more friendly format
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const shortOpt = { weekday: 'short' };
+
+    const startDateFormat= new Date(startDate);
     const endDateFormat = new Date(endDate);
+    startDateFormat.setDate(startDateFormat.getDate() + 1);
     endDateFormat.setDate(endDateFormat.getDate() + 1);
+    
+    const shortStartDate = startDateFormat.toLocaleDateString('en-Ca', shortOpt);
+    const shortEndDate = endDateFormat.toLocaleDateString('en-CA', shortOpt);
+    
     const endDateToString = endDateFormat.toLocaleDateString('en-CA', options);
 
     const template = `
@@ -39,7 +47,7 @@ const todo = ({ id = '', title = '', category = '', startTime = '', endTime = ''
         <div class="text">
             <h3 class="title">${title}</h3>
             <p class="category">${category}</p>
-            <p class="time"><span><i class="far fa-clock"></i></span>${startTime} - ${endTime}</p>
+            <p class="time"><span><i class="far fa-clock"></i></span>${shortStartDate} ${startTime} - ${shortEndDate} ${endTime}</p>
             <p class="date">Due: ${endDateToString}</p>
             <p class="status ${isComplete ? 'completed' : 'progress'}">${isComplete ? 'Completed' : 'Not completed'}</p>
         </div>

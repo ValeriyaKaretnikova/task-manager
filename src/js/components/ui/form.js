@@ -55,6 +55,10 @@ const editForm = function (id, category, description, status, startDate, startTi
                 <input type="time" id="EndTime" name="EndTime" value=${endTime} required>
             </div>
         </div>
+
+        <div>
+            <p class="error"></p>
+        </div>
     </form>
     `
     const form = makeElement(template);
@@ -127,6 +131,10 @@ const addForm = function(id) {
                     <label for="EndTime">End Time</label>
                     <input type="time" id="EndTime" name="EndTime" placeholder="Enter End Time" required>
                 </div>
+            </div>
+
+            <div>
+                <p class="error"></p>
             </div>
         </form>
         `
