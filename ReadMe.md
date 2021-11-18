@@ -11,12 +11,11 @@ This application is built by using:
 - Custom Design
 ---
 
-**Page Screenshots**
+**Pages Examples**
 
 
-![Index page](screenshots/index.jpg)
-![Todos page](screenshots/todo.jpg)
-![Error Page](screenshots/error.jpg)
+![Screens](screenshots/Screens.png)
+
 
 ---
 
