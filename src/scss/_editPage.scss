@@ -35,6 +35,10 @@
         margin: 1rem auto;
         text-align: left;  
         font-family: "Karla", sans-serif;
+        font-size: 0.7rem;   
+            @media (min-width: 360px)    {
+                font-size: 0.9rem;
+            } 
         
         input,
         select {
@@ -94,10 +98,7 @@
     }
     .uneven {
         div:first-child {
-            width: 24%;
-        }
-        div:nth-child(2) {
-            width: 59%;
+            width: 83%;
         }
         div:last-child {
             width: 12%;

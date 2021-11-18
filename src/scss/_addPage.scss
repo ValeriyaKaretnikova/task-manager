@@ -73,19 +73,8 @@
             display: block;
             
         }
-        .small-span {
-            font-size: 0.7rem;
-        }
         input[readonly]{
             background-color: rgb(243, 243, 243);
-        }
-        #todoID {
-            color: $grey;
-            &:hover,
-            &focus {
-                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;           
-                border: 1px solid lightgrey;
-            }
         }
       
     }
@@ -101,10 +90,7 @@
     }
     .uneven {
         div:first-child {
-            width: 24%;
-        }
-        div:nth-child(2) {
-            width: 59%;
+            width: 83%;
         }
         div:last-child {
             width: 12%;

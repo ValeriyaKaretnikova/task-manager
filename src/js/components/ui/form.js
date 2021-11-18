@@ -4,11 +4,16 @@ const editForm = function (id, category, description, status, startDate, startTi
     //Edit Section
     const template = `
     <form  id="editForm" class="form">
-        <div class="flex uneven">
+        <div>
+            <input type="hidden" id="todoID" name="todoID" value=${id} >
+        </div>
+        <div class="flex large">
             <div>
-                <label for="todoID">ID</label>
-                <input type="text" id="todoID" name="todoID" readonly value=${id} required>
+                <label for="Description">Task Description</label>
+                <input type="text" id="Description" name="Description" value="${description}" required>
             </div>
+        </div>
+        <div class="flex uneven">          
             <div>
                 <label for="Category">Category</label>
                 <select name="Category" id="Category" required >
@@ -25,15 +30,6 @@ const editForm = function (id, category, description, status, startDate, startTi
                 <input type="checkbox" id="Status" name="Status">
             </div>
         </div>
-        
-        <div class="flex large">
-            <div>
-                <label for="Description">Task Description</label>
-                <input type="text" id="Description" name="Description" value="${description}" required>
-            </div>
-            
-        </div>
-
         <div class="flex">
             <div>
                 <label for="StartDate">Start Date</label>
@@ -81,11 +77,17 @@ const addForm = function(id) {
         //Add Section
         const template = `
         <form  id="addForm" class="form">
-            <div class="flex uneven">
+            <div>
+                <input type="hidden" id="todoID" name="todoID" value=${id} >
+            </div>
+            <div class="flex large">
                 <div>
-                    <label for="todoID">ID</label>
-                    <input type="text" id="todoID" name="todoID" value = ${id} readonly required>
-                </div>
+                    <label for="Description">Task Description</label>
+                    <input type="text" id="Description" name="Description" placeholder="Brief Task Description" required>
+                </div>           
+            </div>
+            <div class="flex uneven">
+               
                 <div>
                     <label for="Category">Category</label>
                     <select name="Category" id="Category" required >
@@ -103,13 +105,7 @@ const addForm = function(id) {
                 </div>
             </div>
             
-            <div class="flex large">
-                <div>
-                    <label for="Description">Task Description</label>
-                    <input type="text" id="Description" name="Description" placeholder="Brief Task Description" required>
-                </div>
-                
-            </div>
+           
     
             <div class="flex">
                 <div>
@@ -155,3 +151,4 @@ const addForm = function(id) {
 
 export default editForm;
 export {addForm};
+

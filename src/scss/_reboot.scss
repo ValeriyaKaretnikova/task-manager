@@ -85,3 +85,14 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+// Fix input fields for iOS
+input[type="date"],
+input[type="time"],
+select
+{
+    display:block;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    min-height: 1.2em;
+}
