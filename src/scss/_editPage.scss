@@ -66,7 +66,8 @@
         }
         label {
             text-transform: uppercase;    
-            color: $grey;   
+            color: $grey;  
+            display: block; 
         }
         input[readonly]{
             background-color: rgb(243, 243, 243);
