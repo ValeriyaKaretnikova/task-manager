@@ -18,13 +18,8 @@ function datesValid(startDate, startTime, endDate, endTime){
                 return false;
             }
         }
-
-
     }
- 
-        return true;
-  
-
+    return true;
 }
 
 export default datesValid;

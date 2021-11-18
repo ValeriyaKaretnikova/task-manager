@@ -114,13 +114,15 @@
             color: $grey;
             font-size: 1rem;
         }
+        .fa-clock{
+            margin-right: 0.2rem;
+        }
         .time {
             color: $blue;
         }
         .date {
             color: $grey;
         }
-
         .status {
             position: absolute;
             right: 1rem;
@@ -135,12 +137,10 @@
         .completed {
             color: $pink;
         }
-
         .tooltip {
             position: relative;
             display: inline-block;
         }
-
         .tooltip .tooltiptext {
             visibility: hidden;
             width: 120px;

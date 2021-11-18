@@ -29,7 +29,7 @@ const editPage = function (props) {
             const endTime = document.querySelector('#EndTime').value;
 
             if (!datesValid(startDate, startTime, endDate, endTime)) {
-                document.querySelector('.error').textContent = "The start date and time must be before the end date and time"
+                document.querySelector('.error').textContent = "The start date&time must be before the end date&time"
             }
             else {
                 const editTask = {

@@ -86,8 +86,7 @@ const addForm = function(id) {
                     <input type="text" id="Description" name="Description" placeholder="Brief Task Description" required>
                 </div>           
             </div>
-            <div class="flex uneven">
-               
+            <div class="flex uneven">              
                 <div>
                     <label for="Category">Category</label>
                     <select name="Category" id="Category" required >
@@ -105,8 +104,6 @@ const addForm = function(id) {
                 </div>
             </div>
             
-           
-    
             <div class="flex">
                 <div>
                     <label for="StartDate">Start Date</label>

@@ -35,10 +35,12 @@
         .time {
             color: $blue;
         }
+        .fa-clock{
+            margin-right: 0.2rem;
+        }
         .date {
             color: $grey;
         }
-
         .status {
             position: absolute;
             right: 1rem;

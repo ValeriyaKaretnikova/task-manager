@@ -1,4 +1,6 @@
 import makeElement from "../../utils/makeElement";
+import { formatDateShort } from "../../utils/dateFormat";
+import { formatDateLong } from "../../utils/dateFormat";
 
 const todoImage = (category) => {
     switch (category) {
@@ -28,18 +30,9 @@ const todoImage = (category) => {
 const todo = ({ id = '', title = '', category = '', startTime = '', endTime = '', startDate = '', endDate = '', isComplete = false }) => {
 
     //Date Manipulation to display in more friendly format
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    const shortOpt = { weekday: 'short' };
-
-    const startDateFormat= new Date(startDate);
-    const endDateFormat = new Date(endDate);
-    startDateFormat.setDate(startDateFormat.getDate() + 1);
-    endDateFormat.setDate(endDateFormat.getDate() + 1);
-    
-    const shortStartDate = startDateFormat.toLocaleDateString('en-Ca', shortOpt);
-    const shortEndDate = endDateFormat.toLocaleDateString('en-CA', shortOpt);
-    
-    const endDateToString = endDateFormat.toLocaleDateString('en-CA', options);
+    const shortStartDate = formatDateShort(startDate);
+    const shortEndDate = formatDateShort(endDate); 
+    const longEndDate = formatDateLong(endDate);
 
     const template = `
     <div class="todo" data-key="${id}">
@@ -47,8 +40,8 @@ const todo = ({ id = '', title = '', category = '', startTime = '', endTime = ''
         <div class="text">
             <h3 class="title">${title}</h3>
             <p class="category">${category}</p>
-            <p class="time"><span><i class="far fa-clock"></i></span>${shortStartDate} ${startTime} - ${shortEndDate} ${endTime}</p>
-            <p class="date">Due: ${endDateToString}</p>
+            <p class="time"><span><i class="fas fa-clock"></i></span>${shortStartDate} ${startTime}-${shortEndDate} ${endTime}</p>
+            <p class="date">Due: ${longEndDate}</p>
             <p class="status ${isComplete ? 'completed' : 'progress'}">${isComplete ? 'Completed' : 'Not completed'}</p>
         </div>
         <div class="menu">
@@ -88,6 +81,10 @@ const todo = ({ id = '', title = '', category = '', startTime = '', endTime = ''
 }
 
 const todoWithoutMenu = (id = '', title = '', category = '', startTime = '', endTime = '', startDate = '', endDate = '', isComplete = false) => {
+    //Date Manipulation to display in more friendly format
+    const shortStartDate = formatDateShort(startDate);
+    const shortEndDate = formatDateShort(endDate); 
+    const longEndDate = formatDateLong(endDate);
 
     const template = `
     <div class="todo" data-key="${id}">
@@ -95,8 +92,8 @@ const todoWithoutMenu = (id = '', title = '', category = '', startTime = '', end
         <div class="text">
             <h3 class="title">${title}</h3>
             <p class="category">${category}</p>
-            <p class="time"><span><i class="far fa-clock"></i></span>${startTime} - ${endTime}</p>
-            <p class="date">Due: ${endDate}</p>
+            <p class="time"><span><i class="fas fa-clock"></i></span>${shortStartDate} ${startTime} - ${shortEndDate} ${endTime}</p>
+            <p class="date">Due: ${longEndDate}</p>
             <p class="status ${isComplete ? 'completed' : 'progress'}">${isComplete ? 'Completed' : 'Not completed'}</p>
         </div>
     </div>

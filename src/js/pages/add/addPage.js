@@ -2,7 +2,6 @@ import { v4 as uuidv4 } from 'uuid';
 import Header from "../../components/ui/pageHeader";
 import { addForm } from "../../components/ui/form";
 import { Router } from "./../../routes/router";
-import { getStore } from "../../redux/store";
 import reducer from "./../../redux/reducers";
 import datesValid from '../../utils/datesValid';
 
@@ -28,7 +27,7 @@ const addPage = function () {
         const endTime = document.querySelector('#EndTime').value;
 
         if (!datesValid(startDate, startTime, endDate, endTime)) {
-            document.querySelector('.error').textContent = "The start date and time must be before the end date and time"
+            document.querySelector('.error').textContent = "The start date&time must be before the end date&time"
         }
         else {
             const addTask = {
