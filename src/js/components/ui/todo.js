@@ -40,7 +40,7 @@ const todo = ({ id = '', title = '', category = '', startTime = '', endTime = ''
         <div class="text">
             <h3 class="title">${title}</h3>
             <p class="category">${category}</p>
-            <p class="time"><span><i class="fas fa-clock"></i></span>${shortStartDate} ${startTime}-${shortEndDate} ${endTime}</p>
+            <p class="time"><span><i class="fas fa-clock"></i></span>${startDate === endDate?"" : shortStartDate} ${startTime}-${startDate === endDate ? "" : shortEndDate} ${endTime}</p>
             <p class="date">Due: ${longEndDate}</p>
             <p class="status ${isComplete ? 'completed' : 'progress'}">${isComplete ? 'Completed' : 'Not completed'}</p>
         </div>
@@ -92,7 +92,7 @@ const todoWithoutMenu = (id = '', title = '', category = '', startTime = '', end
         <div class="text">
             <h3 class="title">${title}</h3>
             <p class="category">${category}</p>
-            <p class="time"><span><i class="fas fa-clock"></i></span>${shortStartDate} ${startTime} - ${shortEndDate} ${endTime}</p>
+            <p class="time"><span><i class="fas fa-clock"></i></span>${startDate === endDate? "" : shortStartDate} ${startTime}-${startDate === endDate ? "" : shortEndDate} ${endTime}</p>
             <p class="date">Due: ${longEndDate}</p>
             <p class="status ${isComplete ? 'completed' : 'progress'}">${isComplete ? 'Completed' : 'Not completed'}</p>
         </div>
