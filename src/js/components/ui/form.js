@@ -65,7 +65,7 @@ const editForm = function (id, category, description, status, startDate, startTi
     const buttonTemplate = `
      <div class="buttons">
          <button class="cancel" type="button">Cancel</button>
-         <button class="edit" type="submit">Edit</button>
+         <button class="edit" type="submit">Save</button>
      </div> 
      `
     form.appendChild(makeElement(buttonTemplate));
@@ -83,7 +83,7 @@ const addForm = function(id) {
             <div class="flex large">
                 <div>
                     <label for="Description">Task Description</label>
-                    <input type="text" id="Description" name="Description" placeholder="Brief Task Description" required>
+                    <input type="text" id="Description" name="Description" placeholder="What would you like to do?" required>
                 </div>           
             </div>
             <div class="flex uneven">              
